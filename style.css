@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  --prim-color1: hsl(215, 51%, 70%);
+  --prim-color2: hsl(178, 100%, 50%);
+
+  --nat-color1: hsl(217, 54%, 11%);
+  --nat-color2: hsl(216, 50%, 16%);
+  --nat-color3: hsl(215, 32%, 27%);
+  --nat-color4: hsl(0, 0%, 100%);
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--nat-color1);
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+}
+img {
+  max-width: 100%;
+}
+.container {
+  max-width: 23.125rem;
+  background-color: var(--nat-color2);
+  padding: 1rem;
+  border-radius: 0.325rem;
+}
+.image img {
+  border-radius: 0.3rem;
+}
+.image {
+  position: relative;
+}
+.image div {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 4px);
+  top: 0;
+  background-color: hsl(178, 100%, 50%, 55%);
+  border-radius: 0.3rem;
+  z-index: 999;
+  opacity: 0;
+  transition: 0.3s;
+}
+.image div:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.image div img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+h1 {
+  color: var(--nat-color4);
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+p {
+  color: var(--prim-color1);
+  font-size: 1.2rem;
+}
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+h2 {
+  font-size: 1.2rem;
+  color: var(--prim-color2);
+}
+.content img {
+  margin-right: 0.5rem;
+}
+.bottom-section {
+  display: flex;
+  align-items: center;
+}
+.bottom-section img {
+  width: 50px;
+  margin-right: 1rem;
+}
+.bottom-section a {
+  text-decoration: none;
+  color: var(--nat-color4);
+  transition: 0.3s;
+}
+h1:hover,
+a:hover {
+  cursor: pointer;
+  color: var(--prim-color2);
+}
